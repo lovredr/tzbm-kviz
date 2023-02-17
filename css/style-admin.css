@@ -1,0 +1,197 @@
+@font-face {
+    font-family: "kviz-font";
+    src: url("../resources/kviz-font.otf");
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(#663a82 , #3c1361);
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    font-family: Verdana, sans-serif;
+    font-size: min(4vh, 5vmin);
+    
+}
+
+h1 {
+    font-family: kviz-font, Verdana, sans-serif;
+    margin: 0;
+    margin-top: 2vh;
+    margin-bottom: 5vh;
+    color: #663a82;
+    text-shadow: 0.5vmin 0.5vmin 1vmin #3c1361;
+    font-size: min(6vw, 11vmin);
+    white-space: nowrap;
+    user-select: none;
+}
+
+hr {
+  border: 2px solid #00000080;
+  margin: 0;
+  margin-top: 3vh;
+}
+
+a {
+  text-decoration: none;
+  font-family: kviz-font, Verdana, sans-serif;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: min(3vh, 4vmin);
+  margin: 0
+}
+a:hover {
+  color: #ff0000;
+  text-shadow: 0vmin 0vmin 2vmin #ff0000;
+}
+
+div {
+  margin: 2vh;
+  margin-bottom: 5vh;
+}
+
+#novo-button {
+  background-color: #00000080;
+  clip-path: polygon(0% 50%,
+                     3% 0%,
+                     97% 0%,
+                     100% 50%,
+                     97% 100%,
+                     3% 100%);
+  font-family: kviz-font, Verdana, sans-serif;
+  color: silver;
+  text-shadow: 0 0 1.5vmin gray;
+  padding: 2vmin;
+  cursor: pointer;
+}
+#novo-button:hover {
+    color: orange;
+    text-shadow: 0 0 1.5vmin orange;
+}
+
+table {
+    margin-top: 7vh;
+    margin-bottom: 1vh;
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    border-spacing: 5px 5px;
+}
+
+tr:first-child {
+  height: 12vmin;
+}
+
+tr {
+  height: 5vmin;
+}
+
+td {
+  background-color: #00000080;
+  clip-path: polygon(0% 50%,
+                     3% 0%,
+                     97% 0%,
+                     100% 50%,
+                     97% 100%,
+                     3% 100%);
+  color: white;
+  padding: 1vmin;
+}
+
+tr:nth-child(2) td:first-child {
+  background-color: rgba(0, 255, 0, 0.4);
+}
+
+#modal, #shade {
+  display: none;
+}
+
+#modal {
+  margin: 0;
+  position: fixed;
+  z-index: 101;
+  top: 10%;
+  background: radial-gradient(#663a82 , #3c1361);
+  box-shadow: 0px 0px 3vmax 1vmax black;
+}
+
+#shade {
+  margin: 0;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000008c;
+}
+
+form  {
+  margin: 0;
+  margin-top: 2vh;
+  width: 100%;
+}
+
+label {
+  margin: 0;
+  font-size: min(5vh, 6vmin);
+  font-family: kviz-font, Verdana, sans-serif;
+  color: silver;
+  text-shadow: 0 0 1.5vmin silver;
+}
+
+input {
+  margin: 0;
+  margin-bottom: 2vh;
+  font-size: min(2.5vh, 3.5vmin);
+  font-family: Verdana, sans-serif;
+  width: 50%;
+  height: 4vh;
+  text-align: center;
+  clip-path: polygon(0% 50%,
+                     3% 0%,
+                     97% 0%,
+                     100% 50%,
+                     97% 100%,
+                     3% 100%);
+  border: none;
+}
+
+#tekst-pitanja {
+  height: 7vh;
+  width: 80%;
+  margin-top: 1vh;
+}
+
+.x-button {
+  position: absolute;
+  top: 0;
+  right: 1%;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: min(5vw, 5vmin);
+  cursor: pointer;
+}
+
+.x-button:hover {
+  color: orange;
+  text-shadow: 0 0 1vh orange;
+}
+
+#dodaj {
+  clip-path: none;
+  height: auto;
+  margin: 0;
+  margin-top: 3vh;
+  width: auto;
+  background: transparent;
+  color: silver;
+  font-family: kviz-font, Verdana, sans-serif;
+  font-size: min(5vh, 6vmin);
+  color: rgba(255, 255, 255, 0.5);
+  padding: 1vh;
+  cursor: pointer;
+}
+
+#dodaj:hover {
+  color: #00ff00;
+  text-shadow: 0 0 1.5vh #00ff00;
+}

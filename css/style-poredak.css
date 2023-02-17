@@ -1,0 +1,168 @@
+@font-face {
+    font-family: "kviz-font";
+    src: url("../resources/kviz-font.otf");
+}
+
+@keyframes glow {
+    from {
+      text-shadow: 0 0 9vmin silver;
+    }
+    to {
+      text-shadow: 0 0 6vmin silver;		
+    }
+}
+
+@keyframes glow-trenutni {
+    from {
+        box-shadow:inset 0px 0px 0px 5px #ffa60080;
+    }
+    to {
+        box-shadow:inset 0px 0px 0px 5px orange;		
+    }
+}
+
+body {
+    margin: 0;
+    margin-bottom: 5vh;
+    background: radial-gradient(#663a82 , #3c1361);
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+    font-family: kviz-font, Arial, sans-serif;
+    font-size: min(4vh, 5vmin);
+}
+
+h1, h2 {
+    font-family: kviz-font, Verdana, sans-serif;
+    white-space: nowrap;
+    margin: 0;
+}
+
+h1 {
+    color: #663a82;
+    text-shadow: 0.5vmin 0.5vmin 1vmin #3c1361;
+    margin-top: 2vh;
+    font-size: min(6vw, 11vmin);
+    white-space: nowrap;
+    user-select: none;
+}
+
+h2 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    color: silver;
+    font-size: min(9vw, 9vmin);
+    animation: glow 1s ease-in-out infinite alternate;
+    cursor: default;
+}
+
+#home-button {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    margin-right: 10vw;
+    height: min(5vw, 5vmin);
+    width: min(5vw, 5vmin);
+    filter: drop-shadow(0 0 1.5vmin #3c1361);
+    cursor: pointer;
+}
+
+#home-button:hover {
+    filter: drop-shadow(0 0 1.5vmin orange);
+}
+
+#home-button:hover .button-hover {
+  display: block;
+}
+
+#play-button {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: 3vh;
+    margin-bottom: 5vh;
+    margin-left: 10vw;
+    height: min(5vw, 5vmin);
+    width: min(5vw, 5vmin);
+    filter: drop-shadow(0 0 1.5vmin #3c1361);
+    cursor: pointer;
+}
+
+#play-button:hover {
+  filter: drop-shadow(0 0 1.5vmin orange);
+}
+
+#play-button:hover .button-hover {
+display: block;
+}
+
+.button-hover {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+
+table {
+    margin: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    border: none;
+}
+
+thead tr {
+    background-color: transparent;
+    color: silver;
+    text-shadow: 0.5vmin 0.5vmin 1vmin #3c1361;
+    cursor: default;
+}
+
+th {
+    padding: 1vmin;
+    padding-bottom: 2vmin;
+}
+
+td {
+    padding: 1vmin;
+}
+
+td:nth-child(2) {
+    text-align: left;
+  }
+
+td:nth-child(3) {
+    font-size: min(3vh, 4vmin);
+}  
+
+tbody tr:nth-child(odd) {
+  background: #00000050;
+}
+
+tbody tr:nth-child(even) {
+    background: #00000030;
+  }
+
+tbody tr:nth-child(1) {
+    color: gold;
+    text-shadow: 0 0 2vmin yellow;
+}
+
+tbody tr:nth-child(2) {
+    color: silver;
+    text-shadow: 0 0 2vmin white;
+}
+
+tbody tr:nth-child(3) {
+    color: #cd7f32;
+    text-shadow: 0 0 2vmin orange;
+}
+
+#igrac {
+    animation: glow-trenutni 0.5s ease-in-out infinite alternate;
+}

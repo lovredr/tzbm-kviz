@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "kviz-font";
+    src: url("../resources/kviz-font.otf");
+}
+
+@keyframes glow {
+    from {
+      filter: drop-shadow(0 0 5vmin silver);
+    }
+    to {
+      filter: drop-shadow(0 0 2vmin silver);		
+    }
+}
+
+body {
+    margin: 0;
+    background: radial-gradient(#663a82 , #3c1361);
+    background-attachment: fixed;
+    text-align: center;
+    font-family: kviz-font, Verdana, sans-serif;
+    color: silver;
+    font-size: min(6vh, 11vmin);
+    text-shadow: 0 0 3vh silver;
+}
+
+h1 {
+    color: #663a82;
+    margin: 0;
+    margin-top: 2vh;
+    margin-bottom: 15vh;
+    font-size: min(6vw, 11vmin);
+    white-space: nowrap;
+    text-shadow: 0.5vmin 0.5vmin 1vmin #3c1361;
+    user-select: none;
+}
+
+div {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    }
+
+.okvir-glow {
+    height: 11vh;
+    margin-bottom: 10vh;
+    background: transparent;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+.okvir-silver, .okvir-odabir {
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(0% 50%,
+                       3% 0%,
+                       97% 0%,
+                       100% 50%,
+                       97% 100%,
+                       3% 100%);
+}
+
+.okvir-silver {
+    background: silver url("../resources/silver.jpg");
+    background-size: 100% 100%;
+}
+
+.okvir-odabir {
+    background: transparent;
+    cursor: pointer;
+}
+
+.okvir-odabir:hover {
+    background: orange;
+}
+
+.okvir-odabir:hover .okvir-text {
+    color: orange;
+    text-shadow: 0 0 3vh orange;
+}
+
+.okvir-textbox {
+    background: black;
+    width: calc(100% - 0.6vh);
+    height: calc(100% - 0.6vh);
+    clip-path: polygon(calc(0% + 0.1vh) 50%,
+                       3% 0%,
+                       97% 0%,
+                       calc(100% - 0.1vh) 50%,
+                       97% 100%,
+                       3% 100%);
+}
